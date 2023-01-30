@@ -1,0 +1,15 @@
+name: API Request
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+
+jobs:
+  api_request:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Make API request
+        run: |
+          curl -X GET https://realtime-chat-application.onrender.com > response.json
+        shell: bash
