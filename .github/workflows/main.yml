@@ -9,7 +9,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Make API request
+      - name: Make API request to first URL
         run: |
-          curl -X GET https://realtime-chat-application.onrender.com > response.json
+          curl -X GET https://realtime-chat-application.onrender.com > response1.json
+        shell: bash
+
+      - name: Make API request to second URL
+        run: |
+          curl -X GET https://e-commerce-application-013.onrender.com > response2.json
         shell: bash
