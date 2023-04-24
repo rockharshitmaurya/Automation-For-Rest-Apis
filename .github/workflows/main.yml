@@ -23,3 +23,8 @@ jobs:
         run: |
           curl -X GET https://realtime-chat-application.onrender.com > response3.json
         shell: bash
+        
+      - name: Make API request to third URL
+        run: |
+          curl -X GET https://mobilicis-inc-assignment.onrender.com > response3.json
+        shell: bash
