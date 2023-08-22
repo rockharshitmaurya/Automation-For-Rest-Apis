@@ -2,7 +2,7 @@ name: API Request
 
 on:
   schedule:
-    - cron: '*/20 * * * *'
+    - cron: '*/1 * * * *'
 
 jobs:
   api_request:
@@ -11,15 +11,15 @@ jobs:
     steps:
       - name: Make API request to first URL
         run: |
-          curl -X GET https://realtime-chat-application.onrender.com > response1.json
+          curl -X GET https://tatkalsms.azurewebsites.net > response1.json
         shell: bash
 
       - name: Make API request to second URL
         run: |
-          curl -X GET https://e-commerce-application-013.onrender.com > response2.json
+          curl -X GEThttps://tatkalsms.azurewebsites.net > response2.json
         shell: bash
         
       - name: Make API request to third URL
         run: |
-          curl -X GET https://contact-go.onrender.com > response3.json
+          curl -X GEThttps://tatkalsms.azurewebsites.net> response3.json
         shell: bash
